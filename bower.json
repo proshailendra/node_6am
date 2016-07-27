@@ -1,0 +1,27 @@
+{
+  "name": "mean_crud",
+  "description": "mean crud operations",
+  "main": "server.js",
+  "authors": [
+    "shailendra@dotnettricks.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mean",
+    "crud"
+  ],
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.3.1"
+  }
+}

@@ -1,0 +1,39 @@
+<h2 ng-show="user._id!=undefined">Edit User</h2>
+<h2 ng-hide="user._id!=undefined">Create User</h2>
+<hr>
+<form name="userForm" novalidate ng-submit="saveData(user)" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-3">Name</label>
+        <div class="col-md-9">
+            <input type="text" ng-model="user.name" name="Name" ng-required="true" class="form-control"/>
+            <p ng-show="userForm.Name.$error.required && (IsSubmit || userForm.Name.$dirty)">Please Enter Name</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3">Address</label>
+
+        <div class="col-md-9">
+            <textarea ng-model="user.address" name="Address" ng-required="true" class="form-control"></textarea>
+
+            <p ng-show="userForm.Address.$error.required && (IsSubmit || userForm.Address.$dirty)">Please Enter
+                Address</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3">Contact No.</label>
+
+        <div class="col-md-9">
+            <input type="text" ng-model="user.contactNo" name="ContactNo" ng-required="true" class="form-control"/>
+
+            <p ng-show="userForm.ContactNo.$error.required && (IsSubmit || userForm.ContactNo.$dirty)">Please Enter
+                Contact No.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-9 col-md-offset-3">
+            <input type="submit" value="Create" ng-hide="user._id!=undefined" class="btn btn-primary"/>
+            <input type="submit" value="Update" ng-show="user._id!=undefined" class="btn btn-primary"/>
+            <a ui-sref="user" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>
